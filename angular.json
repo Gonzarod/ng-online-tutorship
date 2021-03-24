@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "App03"
+    }
+  },
+  "defaultProject": "App03",
+  "cli": {
+    "analytics": false
+  }
 }
