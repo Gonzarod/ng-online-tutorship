@@ -7,12 +7,14 @@ import { AuthComponent } from './views/auth/auth.component';
 import { TutorshipListComponent } from './views/tutorship-list/tutorship-list.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { TutorshipCreateComponent } from './views/tutorship-create/tutorship-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
-    TutorshipListComponent
+    TutorshipListComponent,
+    TutorshipCreateComponent
   ],
   imports: [
     BrowserModule,

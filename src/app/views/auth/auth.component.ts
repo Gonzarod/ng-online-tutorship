@@ -27,7 +27,7 @@ export class AuthComponent implements OnInit {
       console.log(this.loginForm.getRawValue());
       this.signIn();
     } else {
-      console.log('There is a problem with the form');
+      alert("error")
     }
   }
 
