@@ -9,18 +9,23 @@ import { Observable } from 'rxjs';
 import {environment} from '../../environments/environment';
 
 @Injectable()
-export class HeadersInterceptor implements HttpInterceptor {
+export class HeadersInterceptor   {
 
   constructor() {}
 
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+
+   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+
     const newRequest = request.clone({
-      url: `${environment.apiUrl}/${request.url}`,
+      url: request.url,
       setHeaders: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }
     });
 
     return next.handle(newRequest);
+
   }
+
+
 }

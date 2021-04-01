@@ -1,23 +1,26 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-  <a class="navbar-brand py-2" href="#">Online Tutorship</a>
+<div  *ngIf="getShowBar()" class="container-fluid p-0">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
+    <a class="navbar-brand"m >Online Tutorship</a>
 
-  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor"
-          aria-controls="navbarColor" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="navbar-collapse collapse" id ="navbarColor" style>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="list">Ver Solicitudes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="create">Crear Solicitudes</a>
-      </li>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor"
+            aria-controls="navbarColor" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id ="navbarColor" style>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="list">Ver Solicitudes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="create">Crear Solicitudes</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
 
-    </ul>
-  </div>
-
-</nav>
 <router-outlet></router-outlet>
+
+
